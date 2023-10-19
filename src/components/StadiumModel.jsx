@@ -1,8 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas, useLoader, useThree, useFrame } from "@react-three/fiber";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader";
-import {ModelRotationControl} from './ModelRotationControl'
-
 function Model() {
   return (
     <Canvas style={{ width: "100vw", height: "100vh", background: "#009052" }}>
@@ -17,7 +15,7 @@ function Model() {
 }
 
 function ModelContent() {
-  const gltf = useLoader(GLTFLoader, "/public/untitled.glb");
+  const gltf = useLoader(GLTFLoader, "/untitled.glb");
   const { camera } = useThree();
 
   const screenWidth = window.innerWidth;
