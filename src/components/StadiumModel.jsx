@@ -9,7 +9,7 @@ function Model() {
       <Suspense fallback={null}>
         <ModelContent />
       </Suspense>
-		{/* <ModelRotationControl/> */}
+      {/* <ModelRotationControl/> */}
     </Canvas>
   );
 }
