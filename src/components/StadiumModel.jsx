@@ -1,13 +1,8 @@
 import React, { Suspense } from "react";
-import { Canvas, useLoader, useThree } from "@react-three/fiber";
-import { Loader, OrbitControls, Stars, useGLTF } from "@react-three/drei";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader";
+import { Canvas, useThree } from "@react-three/fiber";
+import { Loader, OrbitControls, useGLTF } from "@react-three/drei";
 
 function Model() {
-//   const gltf = useLoader(GLTFLoader, "/untitled.glb", (loader) => {
-//     loader.manager.onLoad = () => {};
-//   });
-
   return (
     <>
       <Canvas
@@ -20,7 +15,6 @@ function Model() {
         <ambientLight intensity={1} />
         <directionalLight position={[0, 15, 10]} intensity={7} />
         <OrbitControls enableDamping />
-        <Stars />
         <Suspense fallback={null}>
           <ModelContent />
         </Suspense>
